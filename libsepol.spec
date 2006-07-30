@@ -82,6 +82,7 @@ sed -i -e 's/-fpic/-fPIC/' src/Makefile
 %build
 %{__make} \
 	CC="%{__cc}" \
+	LDFLAGS="%{rpmldflags}" \
 	CFLAGS="%{rpmcflags} -Wall"
 
 %install
