@@ -8,7 +8,6 @@ Group:		Libraries
 Source0:	http://www.nsa.gov/selinux/archives/%{name}-%{version}.tgz
 # Source0-md5:	f40612cf2199c4d7157718ce3c2d1688
 URL:		http://www.nsa.gov/selinux/
-BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -75,9 +74,6 @@ Statyczna wersja biblioteki libsepol.
 
 %prep
 %setup -q
-
-# "relocation truncated to fit" on sparc64
-sed -i -e 's/-fpic/-fPIC/' src/Makefile
 
 %build
 %{__make} \
