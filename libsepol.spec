@@ -1,5 +1,5 @@
 Summary:	SELinux binary policy manipulation library
-Summary(pl):	Biblioteka do obróbki polityk SELinuksa w postaci binarnej
+Summary(pl.UTF-8):   Biblioteka do obrÃ³bki polityk SELinuksa w postaci binarnej
 Name:		libsepol
 Version:	1.16.0
 Release:	1
@@ -27,28 +27,28 @@ tools, as well as by programs like load_policy that need to perform
 specific transformations on binary policies such as customizing policy
 boolean settings.
 
-%description -l pl
-Security-enhanced Linux jest prototypem j±dra Linuksa i wielu
-aplikacji u¿ytkowych o funkcjach podwy¿szonego bezpieczeñstwa.
-Zaprojektowany jest tak, aby w prosty sposób ukazaæ znaczenie
-obowi±zkowej kontroli dostêpu dla spo³eczno¶ci linuksowej. Ukazuje
-równie¿ jak tak± kontrolê mo¿na dodaæ do istniej±cego systemu typu
-Linux. J±dro SELinux zawiera nowe sk³adniki architektury pierwotnie
-opracowane w celu ulepszenia bezpieczeñstwa systemu operacyjnego
-Flask. Te elementy zapewniaj± ogólne wsparcie we wdra¿aniu wielu typów
-polityk obowi±zkowej kontroli dostêpu, w³±czaj±c te wzorowane na: Type
-Enforcement (TE), kontroli dostêpu opartej na rolach (RBAC) i
+%description -l pl.UTF-8
+Security-enhanced Linux jest prototypem jÄ…dra Linuksa i wielu
+aplikacji uÅ¼ytkowych o funkcjach podwyÅ¼szonego bezpieczeÅ„stwa.
+Zaprojektowany jest tak, aby w prosty sposÃ³b ukazaÄ‡ znaczenie
+obowiÄ…zkowej kontroli dostÄ™pu dla spoÅ‚ecznoÅ›ci linuksowej. Ukazuje
+rÃ³wnieÅ¼ jak takÄ… kontrolÄ™ moÅ¼na dodaÄ‡ do istniejÄ…cego systemu typu
+Linux. JÄ…dro SELinux zawiera nowe skÅ‚adniki architektury pierwotnie
+opracowane w celu ulepszenia bezpieczeÅ„stwa systemu operacyjnego
+Flask. Te elementy zapewniajÄ… ogÃ³lne wsparcie we wdraÅ¼aniu wielu typÃ³w
+polityk obowiÄ…zkowej kontroli dostÄ™pu, wÅ‚Ä…czajÄ…c te wzorowane na: Type
+Enforcement (TE), kontroli dostÄ™pu opartej na rolach (RBAC) i
 zabezpieczeniach wielopoziomowych.
 
-libsepol dostarcza API do obróbki polityk SELinuksa w postaci
-binarnej. Jest u¿ywane przez checkpolicy (kompilator polityk) i
-podobne narzêdzia, a tak¿e przez programy w rodzaju load_policy,
-potrzebne do wykonywania okre¶lonych przekszta³ceñ na binarnych
-politykach, takich jak dostosowywanie logicznych ustawieñ polityki.
+libsepol dostarcza API do obrÃ³bki polityk SELinuksa w postaci
+binarnej. Jest uÅ¼ywane przez checkpolicy (kompilator polityk) i
+podobne narzÄ™dzia, a takÅ¼e przez programy w rodzaju load_policy,
+potrzebne do wykonywania okreÅ›lonych przeksztaÅ‚ceÅ„ na binarnych
+politykach, takich jak dostosowywanie logicznych ustawieÅ„ polityki.
 
 %package devel
 Summary:	Header files used to build policy manipulation tools
-Summary(pl):	Pliki nag³ówkowe do budowania narzêdzi obrabiaj±cych politykê
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe do budowania narzÄ™dzi obrabiajÄ…cych politykÄ™
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -56,20 +56,20 @@ Requires:	%{name} = %{version}-%{release}
 This package contains the header files needed for developing
 applications that manipulate binary policies.
 
-%description devel -l pl
-Ten pakiet zawiera pliki nag³ówkowe potrzebne do tworzenia aplikacji
-obrabiaj±cych binarne polityki.
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki nagÅ‚Ã³wkowe potrzebne do tworzenia aplikacji
+obrabiajÄ…cych binarne polityki.
 
 %package static
 Summary:	Static version of libsepol library
-Summary(pl):	Statyczna wersja biblioteki libsepol
+Summary(pl.UTF-8):   Statyczna wersja biblioteki libsepol
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static version of libsepol library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna wersja biblioteki libsepol.
 
 %prep
