@@ -1,5 +1,5 @@
 Summary:	SELinux binary policy manipulation library
-Summary(pl.UTF-8):   Biblioteka do obróbki polityk SELinuksa w postaci binarnej
+Summary(pl.UTF-8):	Biblioteka do obróbki polityk SELinuksa w postaci binarnej
 Name:		libsepol
 Version:	1.16.0
 Release:	1
@@ -48,7 +48,7 @@ politykach, takich jak dostosowywanie logicznych ustawień polityki.
 
 %package devel
 Summary:	Header files used to build policy manipulation tools
-Summary(pl.UTF-8):   Pliki nagłówkowe do budowania narzędzi obrabiających politykę
+Summary(pl.UTF-8):	Pliki nagłówkowe do budowania narzędzi obrabiających politykę
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -62,7 +62,7 @@ obrabiających binarne polityki.
 
 %package static
 Summary:	Static version of libsepol library
-Summary(pl.UTF-8):   Statyczna wersja biblioteki libsepol
+Summary(pl.UTF-8):	Statyczna wersja biblioteki libsepol
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
