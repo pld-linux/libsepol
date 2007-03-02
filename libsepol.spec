@@ -7,6 +7,7 @@ License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://www.nsa.gov/selinux/archives/%{name}-%{version}.tgz
 # Source0-md5:	f40612cf2199c4d7157718ce3c2d1688
+Patch0:		%{name}-multilib.patch
 URL:		http://www.nsa.gov/selinux/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -74,6 +75,7 @@ Statyczna wersja biblioteki libsepol.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} \
