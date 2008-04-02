@@ -1,12 +1,12 @@
 Summary:	SELinux binary policy manipulation library
 Summary(pl.UTF-8):	Biblioteka do obróbki polityk SELinuksa w postaci binarnej
 Name:		libsepol
-Version:	2.0.11
+Version:	2.0.25
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://www.nsa.gov/selinux/archives/%{name}-%{version}.tgz
-# Source0-md5:	7cb4b7a18d1d7e70a5b10c4a9f7bcb1f
+# Source0-md5:	08ea31004807eb264da259945cbc9fa3
 URL:		http://www.nsa.gov/selinux/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
