@@ -1,12 +1,12 @@
 Summary:	SELinux binary policy manipulation library
 Summary(pl.UTF-8):	Biblioteka do obróbki polityk SELinuksa w postaci binarnej
 Name:		libsepol
-Version:	2.0.25
+Version:	2.0.30
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://www.nsa.gov/selinux/archives/%{name}-%{version}.tgz
-# Source0-md5:	08ea31004807eb264da259945cbc9fa3
+# Source0-md5:	9535bed4c6a6c2fbf71b941b254c90a8
 URL:		http://www.nsa.gov/selinux/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -90,7 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 	SHLIBDIR=$RPM_BUILD_ROOT/%{_lib}
 
 # make symlink across / absolute
-ln -sf /%{_lib}/$(cd $RPM_BUILD_ROOT/%{_lib} ; echo libsepol.so.*) \
+ln -sf /%{_lib}/$(basename $RPM_BUILD_ROOT/%{_lib}/libsepol.so.*) \
 	$RPM_BUILD_ROOT%{_libdir}/libsepol.so
 
 %clean
@@ -106,11 +106,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/chkcon
 %attr(755,root,root) %{_libdir}/libsepol.so
 %{_includedir}/sepol
-%{_mandir}/man3/*.3*
-%{_mandir}/man8/*.8*
+%{_mandir}/man3/sepol_*.3*
+%{_mandir}/man8/chkcon.8*
+%{_mandir}/man8/genpolbools.8*
+%{_mandir}/man8/genpolusers.8*
 
 %files static
 %defattr(644,root,root,755)
