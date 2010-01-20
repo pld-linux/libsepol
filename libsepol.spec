@@ -1,19 +1,19 @@
 Summary:	SELinux binary policy manipulation library
 Summary(pl.UTF-8):	Biblioteka do obróbki polityk SELinuksa w postaci binarnej
 Name:		libsepol
-Version:	2.0.38
+Version:	2.0.41
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 #git clone http://oss.tresys.com/git/selinux.git/
 Source0:	%{name}-%{version}.tar.gz
-# Source0-md5:	4ae46af2fe61ccffc5c17c744974090f
+# Source0-md5:	386a6c74f61288f21756ebaad97fae65
 URL:		http://userspace.selinuxproject.org/trac/wiki/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Security-enhanced Linux is a patch of the Linux kernel and a number
-of utilities with enhanced security functionality designed to add
+Security-enhanced Linux is a patch of the Linux kernel and a number of
+utilities with enhanced security functionality designed to add
 mandatory access controls to Linux. The Security-enhanced Linux kernel
 contains new architectural components originally developed to improve
 the security of the Flask operating system. These architectural
@@ -109,6 +109,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/chkcon
 %attr(755,root,root) %{_libdir}/libsepol.so
+%{_pkgconfigdir}/libsepol.pc
 %{_includedir}/sepol
 %{_mandir}/man3/sepol_*.3*
 %{_mandir}/man8/chkcon.8*
