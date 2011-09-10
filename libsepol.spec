@@ -80,7 +80,7 @@ Statyczna wersja biblioteki libsepol.
 %{__make} \
 	CC="%{__cc}" \
 	LDFLAGS="%{rpmldflags}" \
-	CFLAGS="%{rpmcflags} -Wall"
+	CFLAGS="%{rpmcflags} %{rpmcppflags} -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
