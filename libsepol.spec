@@ -1,13 +1,13 @@
 Summary:	SELinux binary policy manipulation library
 Summary(pl.UTF-8):	Biblioteka do obróbki polityk SELinuksa w postaci binarnej
 Name:		libsepol
-Version:	2.7
+Version:	2.8
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 #Source0Download: https://github.com/SELinuxProject/selinux/wiki/Releases
-Source0:	https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20170804/%{name}-%{version}.tar.gz
-# Source0-md5:	9424b93fd6efd853b9360f29265c5aa3
+Source0:	https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20180524/%{name}-%{version}.tar.gz
+# Source0-md5:	c19aa9dde1e78d1c2bd3109579e4d484
 URL:		https://github.com/SELinuxProject/selinux/wiki
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -87,8 +87,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	LIBDIR=$RPM_BUILD_ROOT%{_libdir} \
-	SHLIBDIR=$RPM_BUILD_ROOT/%{_lib}
+	LIBDIR=%{_libdir} \
+	SHLIBDIR=/%{_lib}
 
 # make symlink across / absolute
 ln -sf /%{_lib}/$(basename $RPM_BUILD_ROOT/%{_lib}/libsepol.so.*) \
