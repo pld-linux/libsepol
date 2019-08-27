@@ -114,6 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man8/chkcon.8*
 %{_mandir}/man8/genpolbools.8*
 %{_mandir}/man8/genpolusers.8*
+%lang(ru) %{_mandir}/ru/man8/chkcon.8*
 
 %files static
 %defattr(644,root,root,755)
