@@ -9,6 +9,7 @@ Group:		Libraries
 Source0:	https://github.com/SELinuxProject/selinux/releases/download/20190315/%{name}-%{version}.tar.gz
 # Source0-md5:	2fdefe870a61424d8f2d5d37551c6259
 URL:		https://github.com/SELinuxProject/selinux/wiki
+BuildRequires:	flex
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
