@@ -1,13 +1,13 @@
 Summary:	SELinux binary policy manipulation library
 Summary(pl.UTF-8):	Biblioteka do obróbki polityk SELinuksa w postaci binarnej
 Name:		libsepol
-Version:	3.1
+Version:	3.6
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 #Source0Download: https://github.com/SELinuxProject/selinux/wiki/Releases
-Source0:	https://github.com/SELinuxProject/selinux/releases/download/20200710/%{name}-%{version}.tar.gz
-# Source0-md5:	b56dc01b76b97dcb730ab4e2fd1c9dea
+Source0:	https://github.com/SELinuxProject/selinux/releases/download/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	e0c71bc448cffada3406cc9a7ad7ea2c
 URL:		https://github.com/SELinuxProject/selinux/wiki
 BuildRequires:	flex
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -74,6 +74,18 @@ Static version of libsepol library.
 %description static -l pl.UTF-8
 Statyczna wersja biblioteki libsepol.
 
+%package utils
+Summary:	libsepol utilitites
+Summary(pl.UTF-8):	Narzędzia dla libsepol
+Group:		Application/System
+Requires:	%{name} = %{version}-%{release}
+
+%description utils
+libsepol utilitites.
+
+%description utils -l pl.UTF-8
+Narzędzia dla libsepol.
+
 %prep
 %setup -q
 
@@ -103,20 +115,27 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) /%{_lib}/libsepol.so.1
+%attr(755,root,root) /%{_lib}/libsepol.so.2
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/chkcon
 %attr(755,root,root) %{_libdir}/libsepol.so
 %{_pkgconfigdir}/libsepol.pc
 %{_includedir}/sepol
 %{_mandir}/man3/sepol_*.3*
-%{_mandir}/man8/chkcon.8*
 %{_mandir}/man8/genpolbools.8*
 %{_mandir}/man8/genpolusers.8*
-%lang(ru) %{_mandir}/ru/man8/chkcon.8*
 
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libsepol.a
+
+%files utils
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/chkcon
+%attr(755,root,root) %{_bindir}/sepol_check_access
+%attr(755,root,root) %{_bindir}/sepol_compute_av
+%attr(755,root,root) %{_bindir}/sepol_compute_member
+%attr(755,root,root) %{_bindir}/sepol_compute_relabel
+%attr(755,root,root) %{_bindir}/sepol_validate_transition
+%{_mandir}/man8/chkcon.8*
